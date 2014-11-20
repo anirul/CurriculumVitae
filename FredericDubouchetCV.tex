@@ -1,0 +1,330 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy CV/Resume
+% XeLaTeX Template
+% Version 1.0 (5/5/2014)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Debarghya Das (http://www.debarghyadas.com)
+% With extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper]{deedy-resume} % Use US Letter paper, change to a4paper for A4
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+%\lastupdated % Print the Last Updated text at the top right
+
+\namesection{Frédéric}{Dubouchet}{ % Your name
+%\urlstyle{same}\url{http://debarghyadas.com} \\ % Your website, LinkedIn profile or other web address
+\href{mailto:frederic.dubouchet@gmail.com}{frederic.dubouchet@gmail.com} | +41 (79) 104 85 76 % Your contact information
+}
+
+%----------------------------------------------------------------------------------------
+%	LEFT COLUMN
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.33\textwidth} % The left column takes up 33% of the text width of the page
+
+%------------------------------------------------
+% Education
+%------------------------------------------------
+
+\section{Education}
+
+\subsection{HES-SO // Master}
+
+\descript{Master in Science and Engineering - Computer Science}
+\location{2013 | Lausanne, CH}
+Thesis : (6 / 6) - Betatron tune measurement with the LHC damper using a GPU \\
+
+\sectionspace % Some whitespace after the section
+
+\subsection{HES-SO // Geneva - Hepia}
+
+\descript{BS in Computer Science}
+\location{2005 | Geneva, CH}
+Thesis : (5.5 / 6) - 3D stereoscopy \\
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+
+\subsection{EPFL}
+\location{1999 | Lausanne, CH}
+
+\sectionspace
+
+\subsection{Maturité Type S}
+
+\location{1997 | Geneva, CH}
+Grad. (74 / 90) - Swiss secondary school degree \\
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+% Links
+%------------------------------------------------
+
+\section{Links}
+
+Github:// \href{https://github.com/anirul}{\bf anirul} \\
+LinkedIn:// \href{http://ch.linkedin.com/pub/fr%C3%A9d%C3%A9ric-dubouchet/}{\bf Frédéric Dubouchet} \\
+Twitter:// \href{https://twitter.com/anirul_}{\bf @anirul\_} \\
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+% Coursework
+%------------------------------------------------
+
+\section{Coursework}
+
+\subsection{Graduate}
+
+Artificial Intelligence + Practicum \\
+Cryptography \\
+Software Security \\
+Optimizations \\
+Fourrier and Wavelets \\
+Web Data Mining \\
+GPU computing \\
+Cloud Computing
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+
+\subsection{Undergraduate}
+
+Digital Signal Processing \\
+Compilers + Practicum \\
+Theory of Computation \\
+Operating Systems \\
+Databases \\
+Computer Graphics + Practicum
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+% Skills
+%------------------------------------------------
+
+\section{Skills}
+
+\subsection{Programming}
+
+\location{Over 10'000 lines:}
+C++ \textbullet{} C \\
+\location{Over 1'000 lines:}
+Java \LaTeX\ \textbullet{} XML/XSD \textbullet{} Assembly \\
+\location{Familiar:}
+git \textbullet{} make \textbullet{} cmake \\
+iOS \textbullet{} OSX \textbullet{} Linux \textbullet{} FreeBSD \\
+PostgreSQL \textbullet{} BerkleyDB \textbullet{} sqlite
+
+\sectionspace % Some whitespace after the section
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % The end of the left column
+\hfill
+%
+%----------------------------------------------------------------------------------------
+%	RIGHT COLUMN
+%----------------------------------------------------------------------------------------
+%
+\begin{minipage}[t]{0.66\textwidth} % The right column takes up 66% of the text width of the page
+
+%------------------------------------------------
+% Experience
+%------------------------------------------------
+
+\section{Experience}
+
+\runsubsection{IDIAP Research Institut}
+\descript{| Software Engineer}
+
+\location{Aug 2014 - Now | Martigny, CH}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightitemize}
+\item ASR / Robotic and computer vision projects (Python/C++/OpenCL).
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+
+\runsubsection{MokaStudio - EPFL}
+\descript{| Senior Software Engineer}
+
+\location{Feb 2014 – Jul 2014 | Lausanne, CH}
+\begin{tightitemize}
+\item CTI project for a 3D animation and inverse kinematic application (C++).
+\item Writing a full forward scene graph (C++).
+\item Architecture of the computing side of the application, enabling multiple
+    animators to work on the same scene (C++).
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+
+\runsubsection{CERN}
+\descript{| Software Engineer}
+
+\location{May 2006 – Dec 2013 | Geneva, CH}
+\begin{tightitemize}
+\item Design, implementation and coordination of software for the RF group (C++).
+\item Software project leader for the Linac4 RF control system (C++).
+\item LHC RF Beam control: architecture, coordination, implementation (C++).
+\item LHC/ADT damper: architecture, coordination, implementation (C++/OpenCL).
+\item LHC conditionning for the cavities, implementation (C++/Labview).
+\item VME LynxOS/Linux driver framework migration (XML/C++).
+\item Hardware commissioning of the RF LHC System.
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+
+\runsubsection{NagraVision - Kudelski}
+\descript{| Software Engineer}
+
+\location{2001 – 2002 | Lausanne, CH}
+\begin{tightitemize}
+\item Content management and encryptions for numeric television (C++).
+\item Porting the software from Win32 to Linux and TRU64 UNIX (C++).
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+
+\runsubsection{Lysis SA}
+\descript{| Software Engineer}
+
+\location{2000 – 2001 | Lausanne, CH}
+\begin{tightitemize}
+\item Content management and for numeric television (C++).
+\item Multiplexer driver for numeric trelevision (C).
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+
+\runsubsection{ELEAF Sarl}
+\descript{| Founder, Software Engineer}
+
+\location{2000 – 2001 | Geneva, CH}
+\begin{tightitemize}
+\item COM objects for Web/ASP (C++).
+\item Multimedia Java Applets (Java).
+\item FTP, POP3, IMAP interfaces (C++)
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+% Research
+%------------------------------------------------
+
+\section{Research}
+
+\runsubsection{CERN}
+\descript{| Head Undergrad Research}
+
+\location{Jul 2013 – Dec 2013 | Geneva, CH}
+Worked with
+\textbf{\href{http://ch.linkedin.com/pub/paul-albuquerque/12/366/809}{Prof. Paul Albuquerque}}
+and
+\textbf{Wolfgang Höf\/le} during my master thesis on
+\textbf{\href{http://cds.cern.ch/record/1545785?ln=en}{Betatron tune measurement
+with the LHC damper using a GPU}}. A system to make realtime fourrier transform
+on GPU to be able to better react to instabilities in the LHC beam using the ADT
+damper. It was presented at the \textbf{\href{http://www.ibic2013.org}{IBIC 2013}}
+conference in Oxford, UK.
+
+\sectionspace % Some whitespace after the section
+
+%\runsubsection{Hepia}
+%\descript{| Head Undergrad Research}
+
+%\location{Jan 2013 - Apr 2013 | Geneva, CH}
+%A simple study of OpenCL and comparaison with CUDA made for the Hepia. Implemetation
+%of various algorithms using OpenCL, available on
+%\textbf{\href{https://github.com/anirul/OpenCL_PA_2012}{github}}.
+
+%\sectionspace
+
+%------------------------------------------------
+% Awards
+%------------------------------------------------
+
+\section{Awards}
+
+\begin{tabular}{rlcll}
+2001 & \textbf{\href{http://www.pouet.net/prod.php?which=5691}{ping}} & game & 6\textsuperscript{th} at Mekka and Symposium. \\
+2002 & \textbf{\href{http://www.pouet.net/prod.php?which=5652}{El Loco Megabus}} & game & 1\textsuperscript{st} at Mekka and symposium. \\
+2005 & \textbf{\href{http://www.pouet.net/prod.php?which=16393}{panoptriptikum}} & intro 4k & 2\textsuperscript{nd} at Breakpoint. \\
+2006 & \textbf{\href{http://www.pouet.net/prod.php?which=24578}{Biolite}} & game & 6\textsuperscript{th} at Breakpoint. \\
+2010 & \textbf{\href{http://www.pouet.net/prod.php?which=55711}{Biolite Reloaded}} & game & 1\textsuperscript{st} at Buenzli. \\
+\end{tabular}
+
+%\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+% Societies
+%------------------------------------------------
+
+%\section{Societies}
+
+%\begin{tabular}{rll}
+%2014 & top 12\%ile & Tau Beta Pi Engineering Honor Society\\
+%2014 & National & The Global Leadership and Education Forum (tGELF)\\
+%2012 & National & Golden Key International Honor Society\\
+%2012 & National & National Society of Collegiate Scholars\\
+%\end{tabular}
+
+%\sectionspace % Some whitespace after the section
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % The end of the right column
+
+%----------------------------------------------------------------------------------------
+%	SECOND PAGE (EXAMPLE)
+%----------------------------------------------------------------------------------------
+
+%\newpage % Start a new page
+
+%\begin{minipage}[t]{0.33\textwidth} % The left column takes up 33% of the text width of the page
+
+%\section{Example Section}
+
+%\end{minipage} % The end of the left column
+%\hfill
+%\begin{minipage}[t]{0.66\textwidth} % The right column takes up 66% of the text width of the page
+
+%\section{Example Section 2}
+
+%\end{minipage} % The end of the right column
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
