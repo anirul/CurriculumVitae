@@ -1,27 +1,60 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Deedy CV/Resume
-% XeLaTeX Template
-% Version 1.0 (5/5/2014)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
 %
 % Original author:
-% Debarghya Das (http://www.debarghyadas.com)
-% With extensive modifications by:
-% Vel (vel@latextemplates.com)
+% Debarghya Das (http://debarghyadas.com)
 %
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
 %
-% Important notes:
-% This template needs to be compiled with XeLaTeX.
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[a4paper]{deedy-resume} % Use US Letter paper, change to a4paper for A4
 
+\documentclass[]{deedy-resume} % Use US Letter paper, change to a4paper for A4
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{1pt}}
 \begin{document}
+
+\lastupdated
 
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION
@@ -64,10 +97,10 @@ Thesis : (5.5 / 6) - 3D stereoscopy \\
 
 %------------------------------------------------
 
-\subsection{EPFL}
-\location{1999 | Lausanne, CH}
+% \subsection{EPFL}
+% \location{1999 | Lausanne, CH}
 
-\sectionspace
+% \sectionspace
 
 \subsection{Maturité Type S}
 
@@ -83,8 +116,7 @@ Grad. (74 / 90) - Swiss secondary school degree \\
 \section{Links}
 
 Github:// \href{https://github.com/anirul}{\bf anirul} \\
-LinkedIn:// \href{http://ch.linkedin.com/pub/fr%C3%A9d%C3%A9ric-dubouchet/}{\bf Frédéric Dubouchet} \\
-Twitter:// \href{https://twitter.com/anirul_}{\bf @anirul\_} \\
+% LinkedIn:// \href{http://ch.linkedin.com/pub/fr%C3%A9d%C3%A9ric-dubouchet/}{\bf Frédéric Dubouchet} \\
 
 \sectionspace % Some whitespace after the section
 
@@ -131,7 +163,7 @@ Computer Graphics + Practicum
 \location{Over 10'000 lines:}
 C++ \textbullet{} C \\
 \location{Over 1'000 lines:}
-Java \LaTeX\ \textbullet{} XML/XSD \textbullet{} Assembly \\
+Java \textbullet{} \LaTeX\ \textbullet{} XML/XSD \textbullet{} Assembly \\
 \location{Familiar:}
 git \textbullet{} make \textbullet{} cmake \\
 iOS \textbullet{} OSX \textbullet{} Linux \textbullet{} FreeBSD \\
@@ -156,11 +188,24 @@ PostgreSQL \textbullet{} BerkleyDB \textbullet{} sqlite
 
 \section{Experience}
 
+\runsubsection{Google}
+\descript{| Software Engineer}
+
+\location{October 2015 - Now | Z�rich, CH}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightitemize}
+\item Reviewing process for online automatic purchase (C++/Javascript/Java)
+\item Version checking system from online automatic purchase (C++)
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+
 \runsubsection{IDIAP Research Institut}
 \descript{| Software Engineer}
 
-\location{Aug 2014 - Now | Martigny, CH}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\location{Aug 2014 - August 2015 | Martigny, CH}
 \begin{tightitemize}
 \item Robotic and computer vision projects (C++/OpenCL/OpenCV)
 \item ASR Automatic Speech Recognition (python)
@@ -173,12 +218,10 @@ PostgreSQL \textbullet{} BerkleyDB \textbullet{} sqlite
 \runsubsection{MokaStudio - EPFL}
 \descript{| Senior Software Engineer}
 
-\location{Feb 2014 – Jul 2014 | Lausanne, CH}
+\location{Feb 2014 - Jul 2014 | Lausanne, CH}
 \begin{tightitemize}
 \item CTI project for a 3D animation and inverse kinematic application (C++)
 \item Writing a full forward scene graph (C++)
-\item Architecture of the computing side of the application, enabling multiple
-    animators to work on the same scene (C++)
 \end{tightitemize}
 
 \sectionspace % Some whitespace after the section
@@ -188,15 +231,12 @@ PostgreSQL \textbullet{} BerkleyDB \textbullet{} sqlite
 \runsubsection{CERN}
 \descript{| Software Engineer}
 
-\location{May 2006 – Dec 2013 | Geneva, CH}
+\location{May 2006 -�� Dec 2013 | Geneva, CH}
 \begin{tightitemize}
-\item Design, implementation and coordination of software for the RF group (C++)
 \item Software project leader for the Linac4 RF control system (C++)
 \item LHC RF Beam control: architecture, coordination, implementation (C++)
 \item LHC/ADT damper: architecture, coordination, implementation (C++/OpenCL)
 \item LHC conditionning for the cavities, implementation (C++/Labview)
-\item VME LynxOS/Linux driver framework migration (XML/C++)
-\item Hardware commissioning of the RF LHC System
 \end{tightitemize}
 
 \sectionspace % Some whitespace after the section
@@ -206,7 +246,7 @@ PostgreSQL \textbullet{} BerkleyDB \textbullet{} sqlite
 \runsubsection{NagraVision - Kudelski}
 \descript{| Software Developer}
 
-\location{2001 – 2002 | Lausanne, CH}
+\location{2001 - 2002 | Lausanne, CH}
 \begin{tightitemize}
 \item Content management and encryptions for digital television (C++)
 \item Porting the software from Win32 to Linux and TRU64 UNIX (C/C++)
@@ -219,7 +259,7 @@ PostgreSQL \textbullet{} BerkleyDB \textbullet{} sqlite
 \runsubsection{Lysis SA}
 \descript{| Software Developer}
 
-\location{2000 – 2001 | Lausanne, CH}
+\location{2000 - 2001 | Lausanne, CH}
 \begin{tightitemize}
 \item Content management and for digital television (C++)
 \item Multiplexer driver for digital trelevision (C)
@@ -232,11 +272,10 @@ PostgreSQL \textbullet{} BerkleyDB \textbullet{} sqlite
 \runsubsection{ELEAF Sarl}
 \descript{| Founder, Software Developer}
 
-\location{2000 – 2001 | Geneva, CH}
+\location{2000 - 2001 | Geneva, CH}
 \begin{tightitemize}
-\item COM objects for Web/ASP (C++)
+\item COM objects for Web/ASP FTP, POP3, IMAP interfaces (C++)
 \item Multimedia Java Applets (Java)
-\item FTP, POP3, IMAP interfaces (C++)
 \end{tightitemize}
 
 \sectionspace % Some whitespace after the section
@@ -250,14 +289,16 @@ PostgreSQL \textbullet{} BerkleyDB \textbullet{} sqlite
 \runsubsection{CERN}
 \descript{| Head Undergrad Research}
 
-\location{Jul 2013 – Dec 2013 | Geneva, CH}
+\location{Jul 2013 -�� Dec 2013 | Geneva, CH}
 Worked with
 \textbf{\href{http://ch.linkedin.com/pub/paul-albuquerque/12/366/809}{Prof. Paul Albuquerque}}
-and \textbf{Wolfgang Höf\/le} during my master thesis on
+and \textbf{Dr. Wolfgang Höf\/le} during my master thesis on
 \textbf{\href{http://cds.cern.ch/record/1545785?ln=en}{Betatron tune measurement
-with the LHC damper using a GPU}}. A system to make realtime fourrier transform
-on GPU to be able to better react to instabilities in the LHC beam using the ADT
-damper. It was presented at the \textbf{\href{http://www.ibic2013.org}{IBIC 2013}}
+with the LHC damper using a GPU}}. 
+%A system to make realtime fourrier transform
+% on GPU to be able to better react to instabilities in the LHC beam using the ADT
+% damper. 
+It was presented at the \textbf{\href{http://www.ibic2013.org}{IBIC 2013}}
 conference in Oxford, UK.
 
 \sectionspace % Some whitespace after the section
