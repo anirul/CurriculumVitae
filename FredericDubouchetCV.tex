@@ -15,16 +15,16 @@
 % default. If you get compilation errors saying a font is missing, find the line
 % on which the font is used and either change it to a font included with your
 % operating system or comment the line out to use the default font.
-% 
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
+%
 % TODO:
 % 1. Integrate biber/bibtex for article citation under publications.
 % 2. Figure out a smoother way for the document to flow onto the next page.
 % 3. Add styling information for a "Projects/Hacks" section.
 % 4. Add location/address information
 % 5. Merge OpenFont and MacFonts as a single sty with options.
-% 
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % CHANGELOG:
@@ -45,7 +45,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\documentclass[]{deedy-resume} % Use US Letter paper, change to a4paper for A4
+\documentclass[a4paper]{deedy-resume} % Use US Letter paper, change to a4paper for A4
 \usepackage{fancyhdr}
 
 \pagestyle{fancy}
@@ -67,6 +67,20 @@
 \href{mailto:frederic.dubouchet@gmail.com}{frederic.dubouchet@gmail.com} | +41 (79) 104 85 76 % Your contact information
 }
 
+\section{Resume objective}
+
+\begin{flushleft}
+Developer for 20 years in a multiples companies including some of the biggest
+in the industry (\textbf{CERN}, \textbf{Google}), I hope I can bring some of my
+knownledge in embedded and big data system to my future employer. Having
+contacts in the industry in both the French and the German part of Switzerland,
+I can be a valuable addition in any company to achieve their goal.
+\end{flushleft}
+
+% \rule{\linewidth}{1pt}
+
+\noindent\makebox[\linewidth]{\color{headings}\rule{\paperwidth}{0.4pt}}
+
 %----------------------------------------------------------------------------------------
 %	LEFT COLUMN
 %----------------------------------------------------------------------------------------
@@ -82,28 +96,34 @@
 \subsection{HES-SO // Master}
 
 \descript{MSE in Information and Communication Technologies}
-\location{2013 | Lausanne, CH}
+\location{2011 - 2013 | Lausanne, CH}
 Thesis : (6 / 6) - Betatron tune measurement with the LHC damper using a GPU \\
 
 \sectionspace % Some whitespace after the section
 
-\subsection{HES-SO // Geneva - Hepia}
+\subsection{HES-SO // Hepia}
 
 \descript{BS in Computer Science}
-\location{2005 | Geneva, CH}
+\location{2002 - 2005 | Geneva, CH}
 Thesis : (5.5 / 6) - 3D stereoscopy \\
 
 \sectionspace % Some whitespace after the section
 
 %------------------------------------------------
 
-% \subsection{EPFL}
-% \location{1999 | Lausanne, CH}
+\subsection{EPFL}
 
-% \sectionspace
+\descript{Computer Science}
+\location{1997 - 1999 | Lausanne, CH}
+Unfinished - Founded of a company \\
 
-\subsection{MaturitÃ© Type S}
+\sectionspace
 
+%------------------------------------------------
+
+\subsection{MaturitÃ©}
+
+\descript{Type S, scientifique}
 \location{1997 | Geneva, CH}
 Grad. (74 / 90) - Swiss secondary school degree \\
 
@@ -135,7 +155,7 @@ Optimizations \\
 Fourrier and Wavelets \\
 Web Data Mining \\
 GPU computing \\
-Cloud Computing
+Cloud computing
 
 \sectionspace % Some whitespace after the section
 
@@ -148,26 +168,8 @@ Compilers + Practicum \\
 Theory of Computation \\
 Operating Systems \\
 Databases \\
+Virtual Marchine + Practicum \\
 Computer Graphics + Practicum
-
-\sectionspace % Some whitespace after the section
-
-%------------------------------------------------
-% Skills
-%------------------------------------------------
-
-\section{Skills}
-
-\subsection{Programming}
-
-\location{Over 10'000 lines:}
-C++ \textbullet{} C \\
-\location{Over 1'000 lines:}
-Java \textbullet{} \LaTeX\ \textbullet{} XML/XSD \textbullet{} Assembly \\
-\location{Familiar:}
-git \textbullet{} make \textbullet{} cmake \\
-iOS \textbullet{} OSX \textbullet{} Linux \textbullet{} FreeBSD \\
-PostgreSQL \textbullet{} BerkleyDB \textbullet{} sqlite
 
 \sectionspace % Some whitespace after the section
 
@@ -188,12 +190,28 @@ PostgreSQL \textbullet{} BerkleyDB \textbullet{} sqlite
 
 \section{Experience}
 
+\runsubsection{Original Score}
+\descript{| Founder, CEO}
+
+\location{March 2019 - Now | Lens, CH}
+Realization of a game to be release on Steam
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightitemize}
+\item Organizing with Editors and financial sector
+\item Managing a team of graphists and game designers
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+
 \runsubsection{Google}
 \descript{| Software Engineer}
 
 \location{October 2015 - February 2019 | Zurich, CH}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
+Working on Google Shopping from anti-spam to database
 \begin{tightitemize}
+\item Database writing for the Google Shopping group (C++/OpenCV)
 \item Reviewing process for online automatic purchase (C++/Javascript/Java)
 \item Version checking system from online automatic purchase (C++)
 \end{tightitemize}
@@ -206,8 +224,10 @@ PostgreSQL \textbullet{} BerkleyDB \textbullet{} sqlite
 \descript{| Software Engineer}
 
 \location{August 2014 - August 2015 | Martigny, CH}
+Developer for research projects
 \begin{tightitemize}
-\item Robotic and computer vision projects (C++/OpenCL/OpenCV)
+\item Teaching computer vision to researchers (C++/OpenCL/OpenCV)
+\item Robotic and computer vision projects (C++/OpenCL/CUDA/OpenCV)
 \item ASR Automatic Speech Recognition (python)
 \end{tightitemize}
 
@@ -215,12 +235,12 @@ PostgreSQL \textbullet{} BerkleyDB \textbullet{} sqlite
 
 %------------------------------------------------
 
-\runsubsection{MokaStudio - EPFL}
+\runsubsection{EPFL - MokaStudio}
 \descript{| Senior Software Engineer}
 
 \location{February 2014 - July 2014 | Lausanne, CH}
+CTI project for a 3D animation and inverse kinematic application
 \begin{tightitemize}
-\item CTI project for a 3D animation and inverse kinematic application (C++)
 \item Writing a full forward scene graph (C++)
 \end{tightitemize}
 
@@ -231,11 +251,13 @@ PostgreSQL \textbullet{} BerkleyDB \textbullet{} sqlite
 \runsubsection{CERN}
 \descript{| Software Engineer}
 
-\location{May 2006 -€“ December 2013 | Geneva, CH}
+\location{May 2006 - December 2013 | Geneva, CH}
+Software and drivers for controling custom harware board in a realtime
+environment, on LynxOS and then Linux
 \begin{tightitemize}
-\item Software project leader for the Linac4 RF control system (C++)
+\item Leader for the Linac4 RF control system (C++)
 \item LHC RF Beam control: architecture, coordination, implementation (C++)
-\item LHC/ADT damper: architecture, coordination, implementation (C++/OpenCL)
+\item ADT damper: architecture, coordination, implementation (C++/OpenCL)
 \item LHC conditionning for the cavities, implementation (C++/Labview)
 \end{tightitemize}
 
@@ -247,8 +269,8 @@ PostgreSQL \textbullet{} BerkleyDB \textbullet{} sqlite
 \descript{| Software Developer}
 
 \location{2001 - 2002 | Lausanne, CH}
+Content management and encryptions for digital television
 \begin{tightitemize}
-\item Content management and encryptions for digital television (C++)
 \item Porting the software from Win32 to Linux and TRU64 UNIX (C/C++)
 \end{tightitemize}
 
@@ -260,8 +282,8 @@ PostgreSQL \textbullet{} BerkleyDB \textbullet{} sqlite
 \descript{| Software Developer}
 
 \location{2000 - 2001 | Lausanne, CH}
+Content management and encryptions for digital television
 \begin{tightitemize}
-\item Content management and for digital television (C++)
 \item Multiplexer driver for digital trelevision (C)
 \end{tightitemize}
 
@@ -273,12 +295,21 @@ PostgreSQL \textbullet{} BerkleyDB \textbullet{} sqlite
 \descript{| Founder, Software Developer}
 
 \location{2000 - 2001 | Geneva, CH}
+Web deveolopement moslty backend
 \begin{tightitemize}
 \item COM objects for Web/ASP FTP, POP3, IMAP interfaces (C++)
 \item Multimedia Java Applets (Java)
 \end{tightitemize}
 
 \sectionspace % Some whitespace after the section
+
+\end{minipage} % The end of the right column
+
+%----------------------------------------------------------------------------------------
+%	SECOND PAGE (EXAMPLE)
+%----------------------------------------------------------------------------------------
+
+\newpage % Start a new page
 
 %------------------------------------------------
 % Research
@@ -287,31 +318,134 @@ PostgreSQL \textbullet{} BerkleyDB \textbullet{} sqlite
 \section{Research}
 
 \runsubsection{CERN}
-\descript{| Head Undergrad Research}
+\descript{| Graduate Research}
 
-\location{July 2013 -€“ December 2013 | Geneva, CH}
-Worked on
+\location{July 2013 - December 2013 | Geneva, CH}
 \textbf{\href{http://cds.cern.ch/record/1545785?ln=en}{Betatron tune measurement with the LHC damper using a GPU}}
 with
 \textbf{\href{http://ch.linkedin.com/pub/paul-albuquerque/12/366/809}{Prof. Paul Albuquerque}}
 and \textbf{Dr. Wolfgang HÃ¶f\/le} during my master thesis.
-%A system to make realtime fourrier transform
-% on GPU to be able to better react to instabilities in the LHC beam using the ADT
-% damper. 
-It was presented at the \textbf{\href{http://www.ibic2013.org}{IBIC 2013}}
+A system to make realtime fourrier transform
+on GPU to be able to better react to instabilities in the LHC beam using the ADT
+damper. It was presented at the
+\textbf{\href{http://www.ibic2013.org}{IBIC 2013}}
 conference in Oxford, UK.
 
 \sectionspace % Some whitespace after the section
 
-%\runsubsection{Hepia}
-%\descript{| Head Undergrad Research}
+%------------------------------------------------
 
-%\location{Jan 2013 - Apr 2013 | Geneva, CH}
-%A simple study of OpenCL and comparaison with CUDA made for the Hepia. Implemetation
-%of various algorithms using OpenCL, available on
-%\textbf{\href{https://github.com/anirul/OpenCL_PA_2012}{github}}.
+\runsubsection{Hepia}
+\descript{| Undergraduate Research}
 
-%\sectionspace
+\location{Jan 2013 - Apr 2013 | Geneva, CH}
+A simple study of OpenCL and comparaison with CUDA made for the Hepia. Implemetation
+of various algorithms using OpenCL, available on
+\textbf{\href{https://github.com/anirul/OpenCL_PA_2012}{github}}.
+
+\sectionspace
+
+%------------------------------------------------
+% Teaching
+%------------------------------------------------
+
+\section{Teaching}
+
+\runsubsection{EPAC}
+\descript{| Ã‰cole Professionnelle des Arts Contemporains}
+\location{September 2019 - July 2020 | 40\% | Saxon, CH}
+
+\begin{tightitemize}
+\item Game Engine technologies (C++/OpenGL/gRPC/Socket/...)
+\item Handling of Unreal 4 (C++/Blueprint)
+\end{tightitemize}
+
+\sectionspace
+
+%------------------------------------------------
+
+\runsubsection{SAE}
+\descript{| Creative Media Education}
+\location{February 2019 - Now | once per month | Geneva, CH}
+
+\begin{tightitemize}
+\item Game Engine technologies (C++/Socket/...)
+\item Handling of Unreal 4 (C++/Blueprint)
+\end{tightitemize}
+
+\sectionspace
+
+%------------------------------------------------
+
+\runsubsection{SGA}
+\descript{| Swiss Game Academy}
+\location{July 2019 | Fribourg, CH}
+
+\begin{tightitemize}
+\item Handling of Unreal 4 (Blueprint)
+\end{tightitemize}
+
+\sectionspace
+
+%------------------------------------------------
+% Skills
+%------------------------------------------------
+
+\section{Skills}
+
+\begin{minipage}[t]{0.33\textwidth} % The left column takes up 33% of the text width of the page
+
+\runsubsection{Language}
+\descript{| Natural}
+
+\begin{tabular}{ll}
+\textbf{French} & Mother tongue \\
+\textbf{English} & Fluent \\
+\textbf{German} & Rusted \\
+\textbf{Japanese} & Beginner \\
+\end{tabular}
+
+\sectionspace
+
+\end{minipage}
+\hfill
+%------------------------------------------------
+
+\begin{minipage}[t]{0.66\textwidth} % The right column takes up 66% of the text width of the page
+
+\runsubsection{Programming}
+\descript{| Languages \& OS}
+
+\begin{tabular}{ll}
+\textbf{Over 100'000 lines} & C++ \textbullet{} C \\
+\textbf{Over 10'000 lines} & JavaScript \textbullet{} protobuf
+\textbullet{} Java \textbullet{} Python \\
+\textbf{Over 1'000 lines} & \textbullet{} \LaTeX\ \textbullet{}
+XML/XSD \textbullet{} Assembly \textbullet{} gRPC \textbullet{} LUA \\
+\textbf{Familiar} & git \textbullet{} make \textbullet{} cmake \textbullet{}
+PostgreSQL \textbullet{} sqlite \textbullet{} Blueprint \\
+\textbf{OS} & iOS \textbullet{} Windows \textbullet{} OSX \textbullet{} Linux
+\textbullet{} FreeBSD \\
+\end{tabular}
+
+\sectionspace
+
+\end{minipage}
+
+%------------------------------------------------
+
+%\runsubsection{Soft Skills}
+%\descript{| Social}
+
+%\begin{tabular}{ll}
+%Blablabla & bla \\
+%\end{tabular}
+
+%\sectionspace % Some whitespace after the section
+
+\vfill
+
+\noindent\makebox[\linewidth]{\color{headings}\rule{\paperwidth}{0.4pt}}
 
 %------------------------------------------------
 % Awards
@@ -319,17 +453,39 @@ conference in Oxford, UK.
 
 \section{Awards And Projects}
 
-\begin{tabular}{rlcll}
+\begin{tabular}{rlccl}
+2001 & \textbf{\href{http://www.pouet.net/prod.php?which=5691}{Ping}} &
+    32k game & C++ & 6\textsuperscript{th} at Mekka and Symposium \\
 2002 & \textbf{\href{http://www.pouet.net/prod.php?which=5652}{El Loco Megabus}} &
-    game & 1\textsuperscript{st} at Mekka and symposium \\
+    32k game & C++ & 1\textsuperscript{st} at Mekka and Symposium \\
 2005 & \textbf{\href{http://www.pouet.net/prod.php?which=16393}{panoptriptikum}} &
-    intro 4k & 2\textsuperscript{nd} at Breakpoint \\
+    intro 4k & 8Bit-Script & 2\textsuperscript{nd} at Breakpoint \\
+2006 & \textbf{\href{http://www.pouet.net/prod.php?which=24578}{Biolite}} &
+    96k game & C++ & 6\textsuperscript{th} at Breakpoint \\
 2009 & \textbf{\href{https://github.com/anirul/miniDHT}{miniDHT}} &
-    network & Distributed Hash Table (P2P) \\
+    network & C++,protobuf & Distributed Hash Table (P2P) \\
 2010 & \textbf{\href{http://www.pouet.net/prod.php?which=55711}{Biolite Reloaded}} &
-    game & 1\textsuperscript{st} at Buenzli \\
+    game & C++ & 1\textsuperscript{st} at Buenzli \\
 2012 & \textbf{\href{https://github.com/anirul/MOLA_parser}{MOLA Parser}} &
-    research & Parsing of NASA Mars Orbital Laser Altimetry \\
+    research & C++ & Parsing of NASA Mars Orbital Laser Altimetry \\
+2014 & \textbf{\href{https://www.epicgamejam.com/games/sea-mark}{See Mark}} &
+    game & C++ & Epic Game Jam \\
+2015 & \textbf{\href{https://github.com/anirul/CppsTest}{CPPS UE4}} &
+    research & Blueprint & Multiscreen setup for use in an earthquake simulator \\
+2015 & \textbf{\href{https://globalgamejam.org/2015/games/mirages}{Mirages}} &
+    game & Blueprint & Global Game Jam \\
+2015 & \textbf{\href{https://www.epicgamejam.com/games/meow-zedong-great-helmsman-future-chairman-urinal-leap-forward}{Meow Zedong,...}} &
+    game & Blueprint & Epic Game Jam \\
+2016 & \textbf{\href{https://www.epicgamejam.com/games/greens-revenge}{Green Revenge}} &
+    game & Blueprint & Epic Game Jam \\
+2017 & \textbf{\href{https://www.epicgamejam.com/games/meow-zedongs-battle-royale-maneki-neko-wool-party-ocean-deathmatch}{Maneki Neko,...}} &
+    game & Blueprint & Epic Game Jam \\
+2018 & \textbf{\href{https://anirul.itch.io/isotops}{Isotops}} &
+    game & C++,Blueprint & Nordic Game Jam \\
+2018 & \textbf{\href{https://www.epicgamejam.com/games/meow-zedong-great-helmsman-future-chairman-urinal-leap-forward}{Meow Zedong 2,...}} &
+    game & C++,Blueprint & Epic Game Jam \\
+2019 & \textbf{\href{https://www.epicgamejam.com/games/mini-epic-city-builder}{Mini Epic City Builder}} &
+    game & C++ & Epic Game Jam \\
 \end{tabular}
 
 %\sectionspace % Some whitespace after the section
@@ -351,16 +507,6 @@ conference in Oxford, UK.
 
 %----------------------------------------------------------------------------------------
 
-\end{minipage} % The end of the right column
-
-%----------------------------------------------------------------------------------------
-%	SECOND PAGE (EXAMPLE)
-%----------------------------------------------------------------------------------------
-
-%\newpage % Start a new page
-
-%\begin{minipage}[t]{0.33\textwidth} % The left column takes up 33% of the text width of the page
-
 %\section{Example Section}
 
 %\end{minipage} % The end of the left column
@@ -368,8 +514,6 @@ conference in Oxford, UK.
 %\begin{minipage}[t]{0.66\textwidth} % The right column takes up 66% of the text width of the page
 
 %\section{Example Section 2}
-
-%\end{minipage} % The end of the right column
 
 %----------------------------------------------------------------------------------------
 
